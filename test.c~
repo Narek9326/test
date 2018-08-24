@@ -1,0 +1,50 @@
+	#include <stdio.h>
+	#include <vector>
+	#include <iterator>
+	#include <iostream>
+	using namespace std;
+	int main() {
+	int i;
+	int m=3;
+	char* p = new char[20];
+		vector<std::string> v;
+	l: cout<<"Добавление позиций. Нажмите 1 "<< endl;
+	cout<<"Удаление позиций. Нажмите 2 "<< endl;
+	cout<<"Листинг позиций. Нажмите 3 "<< endl;
+	cout<<"Выход. Нажмите 4 "<< endl;
+	v.push_back("Vasya");
+	v.push_back("Artyom");
+	v.push_back("Natalya");
+	v.push_back("Anya");
+	cin>>m;
+	if(m<=0 || m>4)
+	 cout<<"Выбирайте один из вышечисленных"<<endl;
+	else {
+	if(m==1) {
+	int j;
+	cout<<"позицию:"<< endl;
+	cin>>j;
+	cout<<"имя:"<< endl;
+		cin>>p;
+	v.insert(v.begin()+j,p);
+	}
+	}
+
+	if(m==2) {
+			int j;
+	cout<<"позицию:"<< endl;
+	cin>>j;
+	
+	v.erase(v.begin()+j-1);
+	}
+	if(m==3) {
+	cout<<"Выводите номер"<<endl;
+	cin>>i;
+		cout<<i << " "<<v[i]<<endl;
+	
+	}
+if(m==4)
+return 0;
+    	goto l;
+return 0;
+	}

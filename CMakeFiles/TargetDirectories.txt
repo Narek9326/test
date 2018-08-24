@@ -1,0 +1,1 @@
+/home/narek/test/CMakeFiles/test_cmake.dir
